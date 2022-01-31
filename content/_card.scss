@@ -1,0 +1,100 @@
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+p {
+  font-weight: 300;
+}
+
+.container {
+  padding: 1.25rem;
+  background-color: $card-bg;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+
+  .main-image {
+    position: relative;
+
+    div {
+      position: absolute;
+      top: 0;
+      background-color: $CyanTransparent;
+      width: 100%;
+      height: calc(100% - 4px);
+      z-index: 999;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+
+      &:hover {
+        display: block;
+        opacity: 1;
+        cursor: pointer;
+      }
+
+      img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  h2 {
+    color: $White;
+    margin: 1rem 0.5rem 0.5rem 0;
+
+    &:hover {
+      color: $Cyan;
+      cursor: pointer;
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+    border-bottom: 1px solid $line;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 0.5rem;
+      }
+    }
+
+    :first-child {
+      color: $Cyan;
+    }
+  }
+
+  .creator {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-top: 2rem;
+
+    img {
+      width: 3.5rem;
+      margin-right: 1rem;
+      border: 2px solid $White;
+      border-radius: 50%;
+    }
+
+    p span {
+      color: $White;
+      font-weight: 400;
+
+      &:hover {
+        color: $Cyan;
+        cursor: pointer;
+      }
+    }
+  }
+}
